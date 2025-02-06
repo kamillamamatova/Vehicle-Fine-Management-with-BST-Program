@@ -128,3 +128,15 @@ Node *deduct(Node *root, const char *name, int fine) {
         }
         return root;
     }
+}
+
+// Calculate total fine
+void calculateTotal(Node *root, int *total, int *count) {
+    if (root == NULL) return;
+    
+    *total += root->fine;
+    (*count)++;
+    
+    calculateTotal(root->left, total, count);
+    calculateTotal(root->right, total, count);
+}
