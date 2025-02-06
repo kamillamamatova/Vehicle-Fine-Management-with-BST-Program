@@ -64,3 +64,15 @@ Node *search(Node *root, const char *name, int depth) {
     if (root == NULL) {
         return NULL;
     }
+
+    int compare = strcmp(name, root->name);
+    if (compare < 0) {
+        return search(root->left, name, depth + 1);
+    } else if (compare > 0) {
+        return search(root->right, name, depth + 1);
+    } else {
+        printf("%s %d %d\n", root->name, root->fine, depth);
+        return root;
+    }
+}
+
