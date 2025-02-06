@@ -24,3 +24,19 @@ void updateDepth(Node *root, int depth) {
         updateDepth(root->right, depth + 1);
     }
 }
+
+// Function to create a new node
+Node *createNode(const char name[], int fine, int depth) {
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    if (newNode == NULL) {
+        return NULL;
+    }
+
+    strcpy(newNode->name, name);
+    newNode->fine = fine;
+    newNode->depth = depth;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    
+    return newNode;
+}
