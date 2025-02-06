@@ -113,3 +113,13 @@ Node *deleteNode(Node *root, const char *name) {
     }
     return root;
 }
+
+// Deduct fine and remove owner if fine is 0
+Node *deduct(Node *root, const char *name, int fine) {
+    Node *owner = search(root, name, 0);
+    if (owner) {
+        owner->fine -= fine;
+        if (owner->fine <= 0) {
+            printf("%s removed\n", owner->name);
+            root = deleteNode(root, name);
+        }
