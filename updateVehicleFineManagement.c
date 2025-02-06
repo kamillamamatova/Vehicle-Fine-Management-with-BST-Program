@@ -105,3 +105,11 @@ Node *deleteNode(Node *root, const char *name) {
             free(root);
             return temp;
         }
+
+        Node *temp = findMin(root->right);
+        strcpy(root->name, temp->name);
+        root->fine = temp->fine;
+        root->right = deleteNode(root->right, temp->name);
+    }
+    return root;
+}
