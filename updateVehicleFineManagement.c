@@ -123,3 +123,8 @@ Node *deduct(Node *root, const char *name, int fine) {
             printf("%s removed\n", owner->name);
             root = deleteNode(root, name);
         }
+        else{
+            printf("%s not found\n", name);
+        }
+        return root;
+    }
