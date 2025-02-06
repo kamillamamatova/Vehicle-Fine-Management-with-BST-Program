@@ -76,3 +76,32 @@ Node *search(Node *root, const char *name, int depth) {
     }
 }
 
+// Finds minimum node
+Node *findMin(Node *root) {
+    while (root->left != NULL) {
+        root = root->left;
+    }
+    return root;
+}
+
+// Deletes a node
+Node *deleteNode(Node *root, const char *name) {
+    if (root == NULL) {
+        return NULL;
+    }
+
+    int compare = strcmp(name, root->name);
+    if (compare < 0) {
+        root->left = deleteNode(root->left, name);
+    } else if (compare > 0) {
+        root->right = deleteNode(root->right, name);
+    } else {
+        if (root->left == NULL) {
+            Node *temp = root->right;
+            free(root);
+            return temp;
+        } else if (root->right == NULL) {
+            Node *temp = root->left;
+            free(root);
+            return temp;
+        }
