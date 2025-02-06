@@ -140,3 +140,13 @@ void calculateTotal(Node *root, int *total, int *count) {
     calculateTotal(root->left, total, count);
     calculateTotal(root->right, total, count);
 }
+
+// Calculate average fine
+void calculateAverage(Node *root) {
+    int total = 0, count = 0;
+    calculateTotal(root, &total, &count);
+
+    if (count > 0) {
+        printf("%.2f\n", (float)total / count);
+    }
+}
