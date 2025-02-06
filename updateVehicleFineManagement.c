@@ -40,3 +40,27 @@ Node *createNode(const char name[], int fine, int depth) {
     
     return newNode;
 }
+
+// Inserts a node in BST
+Node *insert(Node *root, const char *name, int fine, int depth) {
+    if (root == NULL) {
+        return createNode(name, fine, depth);
+    }
+
+    int compare = strcmp(name, root->name);
+    if (compare < 0) {
+        root->left = insert(root->left, name, fine, depth + 1);
+    } else if (compare > 0) {
+        root->right = insert(root->right, name, fine, depth + 1);
+    } else {
+        root->fine += fine;
+    }
+
+    return root;
+}
+
+// Searches for a node
+Node *search(Node *root, const char *name, int depth) {
+    if (root == NULL) {
+        return NULL;
+    }
