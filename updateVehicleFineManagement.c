@@ -150,3 +150,8 @@ void calculateAverage(Node *root) {
         printf("%.2f\n", (float)total / count);
     }
 }
+
+// Main function
+int main() {
+    Node *root = NULL;
+    char command[20], name[MAX_NAME_LENGTH + 1];
