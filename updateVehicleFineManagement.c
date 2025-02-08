@@ -158,3 +158,6 @@ int main() {
     int fine, numCommands;
 
     scanf("%d", &numCommands);
+
+    for (int i = 0; i < numCommands; i++) {
+        scanf("%s", command);
