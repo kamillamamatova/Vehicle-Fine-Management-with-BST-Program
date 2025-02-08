@@ -161,3 +161,9 @@ int main() {
 
     for (int i = 0; i < numCommands; i++) {
         scanf("%s", command);
+
+        if (strcmp(command, "add") == 0) {
+            scanf("%s %d", name, &fine);
+            root = insert(root, name, fine, 0);
+        }
+    }
