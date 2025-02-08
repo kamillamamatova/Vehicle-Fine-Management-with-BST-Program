@@ -167,3 +167,7 @@ int main() {
             root = insert(root, name, fine, 0);
         }
     }
+
+    // Exit program
+    return 0;
+}
