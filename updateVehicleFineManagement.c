@@ -155,3 +155,6 @@ void calculateAverage(Node *root) {
 int main() {
     Node *root = NULL;
     char command[20], name[MAX_NAME_LENGTH + 1];
+    int fine, numCommands;
+
+    scanf("%d", &numCommands);
