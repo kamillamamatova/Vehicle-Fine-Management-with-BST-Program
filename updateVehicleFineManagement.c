@@ -1,7 +1,3 @@
-// Updated version
-/* COP 3502C Assignment 5
-This program is written by: Kamilla Mamatova */
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
