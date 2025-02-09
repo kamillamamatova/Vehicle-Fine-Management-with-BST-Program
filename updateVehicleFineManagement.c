@@ -29,7 +29,9 @@ void updateDepth(Node *root, int depth){
 
 // Function to create a new node
 Node *createNode(const char name[], int fine, int depth){
+    // Allocate memory for the new node
     Node *newNode = (Node *)malloc(sizeof(Node));
+    // If memory allocation fails
     if (newNode == NULL) {
         return NULL;
     }
