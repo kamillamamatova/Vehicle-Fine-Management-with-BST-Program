@@ -73,6 +73,7 @@ Node *insert(Node *root, const char *name, int fine, int depth){
 
 // Searches for a node
 Node *search(Node *root, const char *name, int depth){
+    // Owner not found
     if (root == NULL){
         return NULL;
     }
@@ -84,6 +85,7 @@ Node *search(Node *root, const char *name, int depth){
     else if (compare > 0){
         return search(root->right, name, depth + 1);
     } 
+    // Print owner's name, fine, and depth if found
     else{
         printf("%s %d %d\n", root->name, root->fine, depth);
         return root;
