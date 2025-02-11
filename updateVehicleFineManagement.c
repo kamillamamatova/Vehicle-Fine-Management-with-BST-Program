@@ -147,6 +147,7 @@ Node *deduct(Node *root, const char *name, int fine){
             // Remove owner if fine reaches zero
             root = deleteNode(root, name);
         }
+        // Print if owner does not exist
         else{
             printf("%s not found\n", name);
         }
