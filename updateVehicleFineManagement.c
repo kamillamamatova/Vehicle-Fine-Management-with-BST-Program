@@ -80,9 +80,11 @@ Node *search(Node *root, const char *name, int depth){
     int compare = strcmp(name, root->name);
     if (compare < 0){
         return search(root->left, name, depth + 1);
-    } else if (compare > 0){
+    } 
+    else if (compare > 0){
         return search(root->right, name, depth + 1);
-    } else{
+    } 
+    else{
         printf("%s %d %d\n", root->name, root->fine, depth);
         return root;
     }
@@ -105,14 +107,17 @@ Node *deleteNode(Node *root, const char *name){
     int compare = strcmp(name, root->name);
     if (compare < 0){
         root->left = deleteNode(root->left, name);
-    } else if (compare > 0){
+    } 
+    else if (compare > 0){
         root->right = deleteNode(root->right, name);
-    } else{
+    } 
+    else{
         if (root->left == NULL){
             Node *temp = root->right;
             free(root);
             return temp;
-        } else if (root->right == NULL){
+        } 
+        else if (root->right == NULL){
             Node *temp = root->left;
             free(root);
             return temp;
