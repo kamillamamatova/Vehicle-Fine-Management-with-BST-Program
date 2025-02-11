@@ -55,9 +55,12 @@ Node *insert(Node *root, const char *name, int fine, int depth){
 
     // Compare names for BST ordering
     int compare = strcmp(name, root->name);
+    // Insert into left subtree if name is lexicographically smaller
     if (compare < 0){
         root->left = insert(root->left, name, fine, depth + 1);
-    } else if (compare > 0){
+    } 
+    // Insert into right subtree if name is lexicographically greater
+    else if (compare > 0){
         root->right = insert(root->right, name, fine, depth + 1);
     } else{
         root->fine += fine;
