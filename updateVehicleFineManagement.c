@@ -102,6 +102,7 @@ Node *findMin(Node *root){
 
 // Deletes a node
 Node *deleteNode(Node *root, const char *name){
+    // Owner not found
     if (root == NULL){
         return NULL;
     }
@@ -113,12 +114,14 @@ Node *deleteNode(Node *root, const char *name){
     else if (compare > 0){
         root->right = deleteNode(root->right, name);
     } 
+    // Node has no left child
     else{
         if (root->left == NULL){
             Node *temp = root->right;
             free(root);
             return temp;
         } 
+        // Node has no right child
         else if (root->right == NULL){
             Node *temp = root->left;
             free(root);
