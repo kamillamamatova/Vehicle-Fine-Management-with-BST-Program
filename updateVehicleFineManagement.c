@@ -36,6 +36,7 @@ Node *createNode(const char name[], int fine, int depth){
         return NULL;
     }
 
+    // Initialize node values
     strcpy(newNode->name, name);
     newNode->fine = fine;
     newNode->depth = depth;
@@ -47,10 +48,12 @@ Node *createNode(const char name[], int fine, int depth){
 
 // Inserts a node in BST
 Node *insert(Node *root, const char *name, int fine, int depth){
+    // Create and return new node if BST is empty
     if (root == NULL){
         return createNode(name, fine, depth);
     }
 
+    // Compare names for BST ordering
     int compare = strcmp(name, root->name);
     if (compare < 0){
         root->left = insert(root->left, name, fine, depth + 1);
