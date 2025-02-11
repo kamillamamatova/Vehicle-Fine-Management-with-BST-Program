@@ -32,7 +32,7 @@ Node *createNode(const char name[], int fine, int depth){
     // Allocate memory for the new node
     Node *newNode = (Node *)malloc(sizeof(Node));
     // If memory allocation fails
-    if (newNode == NULL) {
+    if (newNode == NULL){
         return NULL;
     }
 
@@ -62,7 +62,9 @@ Node *insert(Node *root, const char *name, int fine, int depth){
     // Insert into right subtree if name is lexicographically greater
     else if (compare > 0){
         root->right = insert(root->right, name, fine, depth + 1);
-    } else{
+    } 
+    // If owner already exists, add fine to their current fine
+    else{
         root->fine += fine;
     }
 
