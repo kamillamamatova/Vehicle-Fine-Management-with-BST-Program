@@ -128,6 +128,7 @@ Node *deleteNode(Node *root, const char *name){
             return temp;
         }
 
+        // Node has two children, find the in-order successor (smallest in right subtree)
         Node *temp = findMin(root->right);
         strcpy(root->name, temp->name);
         root->fine = temp->fine;
@@ -143,6 +144,7 @@ Node *deduct(Node *root, const char *name, int fine){
         owner->fine -= fine;
         if (owner->fine <= 0){
             printf("%s removed\n", owner->name);
+            // Remove owner if fine reaches zero
             root = deleteNode(root, name);
         }
         else{
