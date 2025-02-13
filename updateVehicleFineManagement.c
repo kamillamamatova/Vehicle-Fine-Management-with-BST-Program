@@ -165,7 +165,8 @@ void calculateTotal(Node *root, int *total, int *count){
 
     // Increment count of nodes
     (*count)++;
-    
+
+    // Recursively calculate for left and right subtrees
     calculateTotal(root->left, total, count);
     calculateTotal(root->right, total, count);
 }
