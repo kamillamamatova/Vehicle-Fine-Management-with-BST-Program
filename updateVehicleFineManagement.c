@@ -174,6 +174,7 @@ void calculateTotal(Node *root, int *total, int *count){
 // Calculate average fine
 void calculateAverage(Node *root){
     int total = 0, count = 0;
+    // Get total fine and count of nodes
     calculateTotal(root, &total, &count);
 
     if (count > 0){
