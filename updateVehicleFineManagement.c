@@ -162,6 +162,8 @@ void calculateTotal(Node *root, int *total, int *count){
 
     // Add current node's fine to total
     *total += root->fine;
+
+    // Increment count of nodes
     (*count)++;
     
     calculateTotal(root->left, total, count);
