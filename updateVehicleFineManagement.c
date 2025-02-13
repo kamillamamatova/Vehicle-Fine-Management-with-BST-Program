@@ -159,7 +159,8 @@ Node *deduct(Node *root, const char *name, int fine){
 void calculateTotal(Node *root, int *total, int *count){
     // Base case
     if (root == NULL) return;
-    
+
+    // Add current node's fine to total
     *total += root->fine;
     (*count)++;
     
