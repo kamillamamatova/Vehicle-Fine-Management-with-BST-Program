@@ -189,6 +189,7 @@ void calculateAverage(Node *root){
 
 // Main function
 int main(){
+    // Initialize an empty BST
     Node *root = NULL;
     char command[20], name[MAX_NAME_LENGTH + 1];
     int fine, numCommands;
