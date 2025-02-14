@@ -177,6 +177,7 @@ void calculateAverage(Node *root){
     // Get total fine and count of nodes
     calculateTotal(root, &total, &count);
 
+    // Print the average fine
     if (count > 0){
         printf("%.2f\n", (float)total / count);
     }
