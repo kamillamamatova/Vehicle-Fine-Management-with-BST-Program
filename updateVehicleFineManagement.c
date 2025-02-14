@@ -181,6 +181,9 @@ void calculateAverage(Node *root){
     if (count > 0){
         printf("%.2f\n", (float)total / count);
     }
+    else{
+        printf("No fines recorded.\n");
+    }
 }
 
 // Main function
