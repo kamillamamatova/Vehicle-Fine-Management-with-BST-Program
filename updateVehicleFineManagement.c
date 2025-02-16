@@ -191,6 +191,7 @@ void calculateAverage(Node *root){
 int main(){
     // Initialize an empty BST
     Node *root = NULL;
+    // Stores the command type, and the name associated with the command
     char command[20], name[MAX_NAME_LENGTH + 1];
     int fine, numCommands;
 
