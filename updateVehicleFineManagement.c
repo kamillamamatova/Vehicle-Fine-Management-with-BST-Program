@@ -201,6 +201,7 @@ int main(){
 
     // Process each command in a loop
     for (int i = 0; i < numCommands; i++) {
+        // Read the command as a string
         scanf("%s", command);
 
         if (strcmp(command, "add") == 0) {
