@@ -193,6 +193,7 @@ int main(){
     Node *root = NULL;
     // Stores the command type, and the name associated with the command
     char command[20], name[MAX_NAME_LENGTH + 1];
+    // Stores the fine amount, and the number of commands to process
     int fine, numCommands;
 
     scanf("%d", &numCommands);
