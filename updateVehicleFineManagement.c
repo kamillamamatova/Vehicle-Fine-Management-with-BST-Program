@@ -199,6 +199,7 @@ int main(){
     // Read the number of commands from input
     scanf("%d", &numCommands);
 
+    // Process each command in a loop
     for (int i = 0; i < numCommands; i++) {
         scanf("%s", command);
 
