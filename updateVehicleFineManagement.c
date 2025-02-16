@@ -196,6 +196,7 @@ int main(){
     // Stores the fine amount, and the number of commands to process
     int fine, numCommands;
 
+    // Read the number of commands from input
     scanf("%d", &numCommands);
 
     for (int i = 0; i < numCommands; i++) {
