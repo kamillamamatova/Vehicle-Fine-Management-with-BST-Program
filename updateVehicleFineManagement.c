@@ -204,6 +204,7 @@ int main(){
         // Read the command as a string
         scanf("%s", command);
 
+        
         if (strcmp(command, "add") == 0) {
             scanf("%s %d", name, &fine);
             root = insert(root, name, fine, 0);
