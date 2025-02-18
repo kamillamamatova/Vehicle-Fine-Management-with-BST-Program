@@ -206,6 +206,7 @@ int main(){
 
         // User wants to add a new entry
         if (strcmp(command, "add") == 0) {
+            // Reads in the name and fine
             scanf("%s %d", name, &fine);
             root = insert(root, name, fine, 0);
         }
