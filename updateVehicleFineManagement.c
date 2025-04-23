@@ -11,6 +11,7 @@ and balancing nodes (representing owners). */
 #define MAX_NAME_LENGTH 25
 
 typedef struct Node{
+    // Array for the people
     char name[MAX_NAME_LENGTH + 1];
     int fine;
     int depth;
