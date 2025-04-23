@@ -12,7 +12,7 @@ and balancing nodes (representing owners). */
 
 typedef struct Node{
     // Array for the people
-    char name[MAX_NAME_LENGTH + 1];
+    char name[MAX_NAME_LENGTH + 1]; // + null
     int fine;
     int depth;
     struct Node *left;
